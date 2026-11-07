@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+}
+
+:root {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  color: #2e332d;
+  background: #f8f8f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --background: #f8f8f5;
+  --foreground: #2e332d;
+  --card: #fff;
+  --primary: #44634d;
+  --secondary: #eef1eb;
+  --muted: #898f86;
+  --border: #e8e9e3;
+  --ring: #78937a;
+  --serif: "Fraunces", Georgia, serif;
+}
+
+:root.dark {
+  color-scheme: dark;
+  color: #e7e9e2;
+  background: #1d211e;
+  --background: #1d211e;
+  --foreground: #e7e9e2;
+  --card: #252a26;
+  --primary: #a7c3a9;
+  --secondary: #303832;
+  --muted: #a1a99f;
+  --border: #383f39;
+  --ring: #91ad94;
+}
+
+* { box-sizing: border-box; }
+
+html { min-width: 360px; min-height: 100%; }
+
+body {
+  min-width: 360px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background);
+}
+
+button, input { font: inherit; }
+button { color: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+::selection { color: #fff; background: #54745b; }
